@@ -1,8 +1,17 @@
 import express from 'express'
+import { ENV } from './config/env.js'
+import { connectDB } from './config/db.js'
 
 const app=express()
 
+connectDB()
 
-app.listen(5001,()=>{
-    console.log("server is runnig on 5001")
+app.get('/',(req,res)=>{
+    res.send("Hello from server")
+
+})
+
+
+app.listen(ENV.PORT,()=>{
+    console.log(`server is runnig on ${ENV.PORT}`)
 })
