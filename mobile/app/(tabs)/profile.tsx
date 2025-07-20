@@ -1,15 +1,13 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import SignOutButton from '@/components/SignOutButton'
 
-const HomeScreen = () => {
+const ProfileScreen = () => {
   return (
     <SafeAreaView>
-      <Text>HomeScreen</Text>
-      <SignOutButton/>
+      <Text>ProfileScreen</Text>
     </SafeAreaView>
   )
 }
 
-export default HomeScreen
+export default ProfileScreen
